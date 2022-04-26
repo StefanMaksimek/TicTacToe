@@ -1,23 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --bg-color: hsl(216, 9%, 42%);
+    --bg-color: #616975;
     --main-color: #0a4498;
-    --grey1-color: hsl(215, 10%, 32%);
-    --grey2-color: hsl(215, 10%, 90%);
+    --main2-color: #cc0066;
+    --grey1-color: #49505a;
+    --grey2-color: #e3e5e8;
 
-    --bg-hover: hsl(216, 19%, 52%);
-    --main-hover: hsl(215, 88%, 42%);
-    --grey1-hover: hsl(215, 10%, 42%);
-    --grey2-hover: hsl(215, 10%, 80%);
+    --bg-hover: #6d809c;
+    --main-hover: #0d5bc9;
+    --main2-color: #ff0080;
+    --grey1-hover: #606976;
+    --grey2-hover: #c7cbd1;
+}
+
+:hover {
+    transition: 225ms;
 }
 
 body {
     height: 100vh;
     background-color: var(--bg-color);
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Rock Salt', cursive;
+    margin-top: 4rem;
+    color: #000205;
+    font-size: 2rem;
 }
 
 .row {
@@ -42,6 +60,10 @@ body {
     padding: 1rem;
     border: 2px solid black;
     box-shadow: inset -1px -1px 10px 7px hsl(0deg 0% 30% / 38%);
+}
+
+.play-field img {
+    width: 64px;
 }
 
 .play-field:hover {
