@@ -58,6 +58,8 @@ body {
 
 .play-field {
     padding: 1rem;
+    width: 100px;
+    height: 100px;
     border: 2px solid black;
     box-shadow: inset -1px -1px 10px 7px hsl(0deg 0% 30% / 38%);
 }
