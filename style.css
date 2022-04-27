@@ -14,7 +14,7 @@
 
     --bg-hover: #6d809c;
     --main-hover: #0d5bc9;
-    --main2-color: #ff0080;
+    --main2-hover: #ff0080;
     --grey1-hover: #606976;
     --grey2-hover: #c7cbd1;
 }
@@ -36,6 +36,24 @@ body {
     margin-top: 4rem;
     color: #000205;
     font-size: 2rem;
+}
+
+.start {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0.5rem;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    box-shadow: 3px 4px 7px 2px black;
+}
+
+.start:hover {
+    cursor: pointer;
+    background-color: var(--main-hover);
 }
 
 .row {
