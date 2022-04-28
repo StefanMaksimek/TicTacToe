@@ -6,7 +6,7 @@
 }
 
 :root {
-    --bg-color: #616975;
+    --bg-color: #4a8584;
     --main-color: #0a4498;
     --main2-color: #cc0066;
     --grey1-color: #49505a;
@@ -28,14 +28,31 @@ body {
     background-color: var(--bg-color);
 }
 
+span {
+    font-size: 2.5rem;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    height: 80vh;
+    width: 100%;
+    z-index: 9999;
+}
+
+.d-none {
+    display: none;
+    
+}
+
 .header {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: 'Rock Salt', cursive;
-    margin-top: 4rem;
+    margin-top: 2rem;
     color: #000205;
-    font-size: 2rem;
 }
 
 .start {
@@ -80,6 +97,7 @@ body {
     height: 100px;
     border: 2px solid black;
     box-shadow: inset -1px -1px 10px 7px hsl(0deg 0% 30% / 38%);
+    transition: 1s;
 }
 
 .play-field img {
@@ -87,6 +105,48 @@ body {
 }
 
 .play-field:hover {
+    transition: 225ms;
     background-color: var(--grey2-hover);
     cursor: pointer;
+}
+
+/******* Win Animation ********/
+
+/******* 1st line ********/
+.t-up {
+    transform: translateY(-18px) scale(1.2);
+}
+
+.t-up-left {
+    transform: translate(-18px, -18px) scale(1.2);
+}
+
+.t-up-right {
+    transform: translate(18px, -18px) scale(1.2);
+}
+
+/******* 2nd line ********/
+.t-middle {
+    transform: scale(1.2);
+}
+
+.t-left {
+    transform: translate(-18px, 0px) scale(1.2);
+}
+
+.t-right {
+    transform: translate(18px, 0px) scale(1.2);
+}
+
+/******* 3rd line ********/
+.t-down {
+    transform: translate(0px, 18px) scale(1.2);
+}
+
+.t-down-right {
+    transform: translate(18px, 18px) scale(1.2);
+}
+
+.t-down-left {
+    transform: translate(-18px, 18px) scale(1.2);
 }
