@@ -1,8 +1,8 @@
+let players = ["circle", "cross"]
+let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let activePlayer = players[0];
 
 let ALERT_AUDIO = new Audio("./audio/alert.mp3");
-let SUCCESS_AUDIO = new Audio("#");
-let WIN_AUDIO = new Audio("#");
-let LOSE_AUDIO = new Audio("#");
 
 
 function setPlayArea() {
@@ -32,7 +32,6 @@ function setSymbole(i) {
         } else {
             changePlayer();
         }
-
     } else {
         ALERT_AUDIO.play();
     }
@@ -118,6 +117,7 @@ function proofWin() {
     return proofHrizontaly() || proofDiagonal() || proofVertical();
 }
 
+
 function proofHrizontaly() {
     return fields[0] === fields[1] && fields[1] === fields[2] || //horizontal oben
     fields[3] === fields[4] && fields[4] === fields[5] ||        //horizontal mitte
@@ -201,7 +201,6 @@ function setDiagonal() {
         document.getElementById(7).classList.add('t-down-left');
     }
 }
-
 
 
 function setWinningCard() {

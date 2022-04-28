@@ -37,7 +37,7 @@ span {
     top: 0;
     height: 80vh;
     width: 100%;
-    z-index: 9999;
+    z-index: 10;
 }
 
 .d-none {
@@ -57,6 +57,7 @@ span {
 
 .start {
     position: absolute;
+    z-index: 9999;
     bottom: 50px;
     left: 50%;
     transform: translate(-50%);
