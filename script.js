@@ -30,7 +30,7 @@ function setSymbole(i) {
             fillwinfields();
             setWinningCard();
             setBlockDiv();
-        } else if (proofDraw()) {
+        } else if (proofDrawIncludes()) {
             setDrawCard()
         }
         else {
@@ -139,6 +139,18 @@ function proofVertical() {
     return fields[0] === fields[3] && fields[3] === fields[6] || //vertikal links
         fields[1] === fields[4] && fields[4] === fields[7] ||        //vertikal mitte
         fields[2] === fields[5] && fields[5] === fields[8];          //vertikal rechts
+}
+
+
+function proofDrawShort() {
+    for(let i = 0; i < fields.length; i++) {
+        i != fields[i]
+    } 
+}
+
+
+function proofDrawIncludes() {
+    return fields.includes([0, 1, 2, 3, 4, 5, 6, 7, 8])
 }
 
 
