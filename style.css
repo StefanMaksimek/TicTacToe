@@ -82,6 +82,8 @@ h1 {
 
 .row {
     display: flex;
+    transition: 1s;
+    height: 100px;
 }
 
 .play-holder {
@@ -118,6 +120,14 @@ h1 {
     transition: 225ms;
     background-color: var(--grey2-hover);
     cursor: pointer;
+}
+
+.cross {
+    color: var(--main2-color);
+} 
+
+.circle {
+    color: var(--main-color);
 }
 
 /******* Win Animation ********/
@@ -161,6 +171,30 @@ h1 {
     transform: translate(-18px, 18px) scale(1.2);
 }
 
+/******* Draw Animation ********/
+.line-down {
+    transform: translateY(100px);
+}
+
+.line-up {
+    transform: translateY(-100px);
+}
+
+.draw {
+    background-color: var(--grey2-color);
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.draw span {
+    margin-right: 8px;
+    font-size: 5rem;
+}
+
 
 @media screen and (max-height: 650px) {
     @media screen and (orientation: landscape) {
@@ -173,6 +207,10 @@ h1 {
 
 
 @media screen and (max-width: 400px) {
+    .row {
+        height: 25vw;
+    }
+
     .play-field {
         display: flex;
         width: 25vw;
@@ -191,6 +229,10 @@ h1 {
 }
 
 @media screen and (max-height: 400px) {
+    .row {
+        height: 25vh;
+    }
+
     .play-field {
         display: flex;
         width: 25vh;

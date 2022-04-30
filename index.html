@@ -8,7 +8,6 @@
     <title>TicTacToe</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="./js/JSON.js"></script>
     <script src="./js/HTML.js"></script>
     <script src="./script.js"></script>
 
@@ -22,10 +21,10 @@
     <div class="header" id="header">
         <h1>TicTacToe</h1>
     </div>
-    
+
     <div class="play-holder">
-        <div class="play-area">
-            <div class="first-line row">
+        <div class="play-area" id="play-area">
+            <div class="first-line row" id="first-line">
                 <div class="play-field" id="1" onclick="setSymbole(1)">
                 </div>
                 <div class="play-field" id="2" onclick="setSymbole(2)">
@@ -36,7 +35,7 @@
                 </div>
             </div>
     
-            <div class="second-line row">
+            <div class="second-line row" id="second-line">
                 <div class="play-field" id="4" onclick="setSymbole(4)">
                     <img src="./img/cross.png">
                 </div>
@@ -47,7 +46,7 @@
                 </div>
             </div>
     
-            <div class="third-line row">
+            <div class="third-line row" id="third-line">
                 <div class="play-field" id="7" onclick="setSymbole(7)">
                     <img src="./img/circle.png">
                 </div>
