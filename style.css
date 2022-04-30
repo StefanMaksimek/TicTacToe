@@ -47,7 +47,7 @@ span {
 
 .d-none {
     display: none;
-    
+
 }
 
 .header {
@@ -99,6 +99,8 @@ h1 {
 
 .play-field {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     width: 100px;
     height: 100px;
@@ -107,7 +109,10 @@ h1 {
     transition: 1s;
 }
 
-
+.play-field img {
+    width: 64px;
+    height: 64px;
+}
 
 .play-field:hover {
     transition: 225ms;
@@ -174,6 +179,12 @@ h1 {
         height: 25vw;
     }
 
+    .play-field img {
+        object-fit: contain;
+        width: 18vw;
+        height: 18vw;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -184,5 +195,11 @@ h1 {
         display: flex;
         width: 25vh;
         height: 25vh;
+    }
+
+    .play-field img {
+        object-fit: contain;
+        width: 18vh;
+        height: 18vh;
     }
 }
