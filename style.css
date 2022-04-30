@@ -3,6 +3,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 :root {
@@ -24,6 +25,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-color: var(--bg-color);
 }
@@ -35,7 +40,7 @@ span {
 .block {
     position: absolute;
     top: 0;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     z-index: 10;
 }
@@ -46,21 +51,22 @@ span {
 }
 
 .header {
-    position: absolute;
     display: flex;
     justify-content: center;
-    width: 100%;
     font-family: 'Rock Salt', cursive;
-    margin-top: 2rem;
     color: #000205;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 .start {
-    position: absolute;
+    margin: 1.5rem;
+    text-align: center;
+    width: 10rem;
     z-index: 9999;
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%);
     padding: 0.5rem;
     background-color: var(--main-color);
     color: white;
@@ -79,8 +85,7 @@ span {
 }
 
 .play-holder {
-    height: 100vh;
-    width: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +98,7 @@ span {
 }
 
 .play-field {
+    display: flex;
     padding: 1rem;
     width: 100px;
     height: 100px;
@@ -101,9 +107,7 @@ span {
     transition: 1s;
 }
 
-.play-field img {
-    width: 64px;
-}
+
 
 .play-field:hover {
     transition: 225ms;
@@ -150,4 +154,35 @@ span {
 
 .t-down-left {
     transform: translate(-18px, 18px) scale(1.2);
+}
+
+
+@media screen and (max-height: 650px) {
+    @media screen and (orientation: landscape) {
+        body {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .play-field {
+        display: flex;
+        width: 25vw;
+        height: 25vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .play-field {
+        display: flex;
+        width: 25vh;
+        height: 25vh;
+    }
 }
